@@ -13,24 +13,30 @@ using namespace std;
 int main() {
 
 	int x = 7;
-	int y = 42;
 	int *ip = &x;
+	int &y = x;
 
 	printf("Value of x is %d\n", x);
-	printf("Value of y is %d\n", y);
 	printf("Value of x is %d\n", *ip);
+	printf("Value of y is %d\n", y);
 
-	x = 73;
+	x = 42;
 	printf("Value of x is %d\n", x);
-	printf("Value of y is %d\n", y);
 	printf("Value of x is %d\n", *ip);
+	printf("Value of y is %d\n", y);
 
-	ip = &y;
+	int z = 149;
+	ip = &z;
 	printf("Value of x is %d\n", x);
-	printf("Value of y is %d\n", y);
 	printf("Value of x is %d\n", *ip);
-	cout << "Address of 42: " << ip << endl;
-	puts("Hello, World!");
+	printf("Value of y is %d\n", y);
+	printf("Value of y is %d\n", z);
+
+	y = z;
+	printf("Value of x is %d\n", x);
+	printf("Value of x is %d\n", *ip);
+	printf("Value of y is %d\n", y);
+	printf("Value of y is %d\n", z);
 
 	return 0;
 }
