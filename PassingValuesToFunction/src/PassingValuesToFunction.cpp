@@ -11,19 +11,19 @@
 #include <string>
 using namespace std;
 
-void func(const int &i) {
+void func(const string &fs) {		// read only string, no additional copy made/space needed
 
-	printf("Value is %d\n", i);
+	printf("Value is %s\n", fs.c_str());
 }
 
 int main() {
 
 	string s = "Hello I'm a string";
-	int x = 42;
-	func(x);
-	x = 73;
 
-	cout << "x is: " << x << endl;
+	func(s);
+	printf("string is: %s\n", s.c_str());
+
+	cout << "string is: " << s << endl;
 
 	return 0;
 }
