@@ -15,7 +15,7 @@ public:
 	Animal() {
 		cout << "Animal created." << endl;
 	}
-	Animal(const Animal& other) :
+	Animal(const Animal &other) :
 			name(other.name) {
 		cout << "Animal created by copying." << endl;
 	}
