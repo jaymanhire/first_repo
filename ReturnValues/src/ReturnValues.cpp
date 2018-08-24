@@ -11,15 +11,18 @@
 #include <string>
 using namespace std;
 
-int func(int i) {
-	puts("this is func()");
-	return i * 2;
+ const string & func() {
+
+	static string s = "This is a string";
+	return s;
 }
 
 int main() {
 
 	puts("this is main()");
-	printf("Return: %d\n", func(42));
+	printf("Return: %s\n", func().c_str());
+
+
 
 
 	return 0;
