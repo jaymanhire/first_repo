@@ -11,6 +11,7 @@
 #include <string>
 
 using namespace std;
+
 const char * prompt();
 int jump(const char *);
 
