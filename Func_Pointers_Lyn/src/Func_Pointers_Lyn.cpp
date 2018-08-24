@@ -18,10 +18,12 @@ using namespace std;
 
 int main() {
 
-	void (*fp)() = func;
+	void (*fp)() = &func;
+	//void (*fp)() = &func;
 
 	puts("this is main()");
-	fp();
+	//*fp();
+	(*fp)();
 
 
 
