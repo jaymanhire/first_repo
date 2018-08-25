@@ -13,6 +13,7 @@
 using namespace std;
 
 const char * prompt();
+
 int jump(const char *);
 
 void fa() {
@@ -31,11 +32,10 @@ void fe() {
 	puts("this is fe()");
 }
 
-void (*funcs[])() = {fa, fb, fc, fd, fe, nullptr};
+void (*funcs[])() = {fa, fb, fc, fd, fe, nullptr}; //array of function pointers //nullptr terminate the list
 
 int main(int argc, char ** argv) {
-	while (jump(prompt()))
-		;
+	while (jump(prompt()));
 	puts("\nDone.");
 	return 0;
 }
@@ -51,7 +51,7 @@ const char * prompt() {
 	printf(">> ");
 
 	fflush(stdout);                 // flush after prompt
-	const int buffsz = 16;          // constant for buffer size
+	const int buffsz = 8;          // constant for buffer size
 	static char response[buffsz];   // static storage for response buffer
 	fgets(response, buffsz, stdin); // get response from console
 
