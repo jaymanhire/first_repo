@@ -26,11 +26,11 @@ int main() {
 	Parent parent;
 	Brother brother;
 
-	Parent *pp = &brother;
-	//Brother *pb = &parent;
-	Brother *pb = static_cast<Brother *>(&parent);
-	cout << pb;
-	delete pb;
+	Parent *ppb = &brother;
+
+	Brother *pbb = static_cast<Brother *>(ppb);
+
+	cout << pbb << endl;
 
 	return 0;
 }
