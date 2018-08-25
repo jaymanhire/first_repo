@@ -13,11 +13,11 @@ class Parent {
 
 };
 
-class Brother {
+class Brother: public Parent {
 
 };
 
-class Sister {
+class Sister: public Parent {
 
 };
 
@@ -26,8 +26,11 @@ int main() {
 	Parent parent;
 	Brother brother;
 
-	float value = 3.23;
-	cout << static_cast<int>(value) << endl;
+	Parent *pp = &brother;
+	//Brother *pb = &parent;
+	Brother *pb = static_cast<Brother *>(&parent);
+	cout << pb;
+	delete pb;
 
 	return 0;
 }
