@@ -51,7 +51,7 @@ int main() {
 
 	puts("------------------------------------------");
 	Jay j;
-	j.countDown(100);
+	j.countDown(1000);
 	puts("Blast Off");
 
 	return 0;
