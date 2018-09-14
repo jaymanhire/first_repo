@@ -8,6 +8,7 @@
 
 #include <iostream>
 #include <iomanip>
+#include <cstdio>
 using namespace std;
 
 class Test {
@@ -23,17 +24,35 @@ public:
 	}
 
 };
+class Jay {
+private:
+public:
+	int countDown(int count) {
+		if (count == 0)
+			return 0;
+
+		cout << count << "..." << endl;
+		countDown(count - 1);
+		return 0;
+	}
+
+};
 int main() {
 
 	Test test1;
 
-	double *pDub = new double;
-	*pDub = 41987.543;
-	cout << "Double value: " << fixed << setprecision(3) << *pDub << endl;
-	delete pDub;
+	 double *pDub = new double;
+	 *pDub = 41987.543;
+	 cout << "Double value: " << fixed << setprecision(3) << *pDub << endl;
+	 delete pDub;
 
-	Test *pTest = new Test;
-	delete pTest;
+	 Test *pTest = new Test;
+	 delete pTest;
+
+	puts("------------------------------------------");
+	Jay j;
+	j.countDown(100);
+	puts("Blast Off");
 
 	return 0;
 }

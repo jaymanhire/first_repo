@@ -22,7 +22,7 @@ int main() {
 
 	char s[] = "string";
 
-	for (char *cp = s; *cp != 0; ++cp) {
+	for (const char *cp = s; *cp != 0; ++cp) {
 		printf("Letter: %c\n", *cp);
 	}
 
