@@ -11,14 +11,14 @@ using namespace std;
 
 string password = "Hello";
 
-void runFunc() {
+void runLogin() {
 
 	cout << "Enter password: " << flush;
 	cin >> password;
 
 	while (password != "Hello") {
 		cout << "Access Denied...\n" << endl;
-		runFunc();
+		runLogin();
 	}
 }
 void grantAccess() {
@@ -27,7 +27,7 @@ void grantAccess() {
 
 int main() {
 
-	runFunc();
+	runLogin();
 	grantAccess();
 
 	return 0;
